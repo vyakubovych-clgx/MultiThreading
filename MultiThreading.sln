@@ -17,9 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiThreading.Task3.Matrix
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiThreading.Task4.Threads.Join", "MultiThreading.Task4.Threads.Join\MultiThreading.Task4.Threads.Join.csproj", "{3C9627BE-0041-493D-B2CA-C8CD6B4BB3F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThreading.OptionalTask1.Client", "Multithreading.OptionalTask1.Client\MultiThreading.OptionalTask1.Client.csproj", "{A20ADA7C-F63C-4AB2-A3DC-AFBDC052AD92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiThreading.OptionalTask1.Client", "Multithreading.OptionalTask1.Client\MultiThreading.OptionalTask1.Client.csproj", "{A20ADA7C-F63C-4AB2-A3DC-AFBDC052AD92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThreading.OptionalTask1.Server", "MultiThreading.OptionalTask1.Server\MultiThreading.OptionalTask1.Server.csproj", "{43CA8578-45BC-45EF-AF8A-E8D584193120}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiThreading.OptionalTask1.Server", "MultiThreading.OptionalTask1.Server\MultiThreading.OptionalTask1.Server.csproj", "{43CA8578-45BC-45EF-AF8A-E8D584193120}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThreading.OptionalTask2.Client", "MultiThreading.OptionalTask2.Client\MultiThreading.OptionalTask2.Client.csproj", "{F43C15C8-BB90-4A3F-B5A7-EB668FEA7F80}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiThreading.OptionalTask2.Server", "MultiThreading.OptionalTask2.Server\MultiThreading.OptionalTask2.Server.csproj", "{489AA0F2-71E7-4607-87B9-65AF6123B5B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,14 @@ Global
 		{43CA8578-45BC-45EF-AF8A-E8D584193120}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43CA8578-45BC-45EF-AF8A-E8D584193120}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43CA8578-45BC-45EF-AF8A-E8D584193120}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F43C15C8-BB90-4A3F-B5A7-EB668FEA7F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F43C15C8-BB90-4A3F-B5A7-EB668FEA7F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F43C15C8-BB90-4A3F-B5A7-EB668FEA7F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F43C15C8-BB90-4A3F-B5A7-EB668FEA7F80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{489AA0F2-71E7-4607-87B9-65AF6123B5B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{489AA0F2-71E7-4607-87B9-65AF6123B5B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{489AA0F2-71E7-4607-87B9-65AF6123B5B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{489AA0F2-71E7-4607-87B9-65AF6123B5B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
