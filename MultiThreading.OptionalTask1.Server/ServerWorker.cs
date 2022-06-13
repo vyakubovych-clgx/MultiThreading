@@ -88,9 +88,7 @@ public class ServerWorker
         try
         {
             foreach (var message in _messageHistoryProcessor.GetMessageHistory())
-            {
                 streamWriter.WriteLine(message);
-            }
             streamWriter.Flush();
         }
         catch (IOException)
