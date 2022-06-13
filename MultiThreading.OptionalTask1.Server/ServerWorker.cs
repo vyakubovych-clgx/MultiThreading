@@ -90,8 +90,8 @@ public class ServerWorker
             foreach (var message in _messageHistoryProcessor.GetMessageHistory())
             {
                 streamWriter.WriteLine(message);
-                streamWriter.Flush();
             }
+            streamWriter.Flush();
         }
         catch (IOException)
         {
