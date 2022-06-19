@@ -23,9 +23,10 @@ namespace MultiThreading.Task5.Threads.SharedCollection
             Console.WriteLine("Use Thread, ThreadPool or Task classes for thread creation and any kind of synchronization constructions.");
             Console.WriteLine();
 
-            Task.Run(PopulateCollection);
-            Task.Run(() => OutputCollection(Collection));
+            var populateTask = Task.Run(PopulateCollection);
+            var outputTask = Task.Run(() => OutputCollection(Collection));
 
+            Task.WaitAll(populateTask, outputTask);
             Console.ReadLine();
         }
 
@@ -37,14 +38,15 @@ namespace MultiThreading.Task5.Threads.SharedCollection
                 {
                     Collection.Add(i + 1);
                     Monitor.Pulse(LockObject);
-                    Monitor.Wait(LockObject);
+                    if (i != COLLECTION_SIZE - 1)
+                        Monitor.Wait(LockObject);
                 }
             }
         }
 
         static void OutputCollection(List<int> collection)
         {
-            while (true)
+            for (int i = 0; i < COLLECTION_SIZE; i++)
             {
                 lock (LockObject)
                 {
@@ -52,7 +54,8 @@ namespace MultiThreading.Task5.Threads.SharedCollection
                         Console.Write($"{number} ");
                     Console.WriteLine();
                     Monitor.Pulse(LockObject);
-                    Monitor.Wait(LockObject);
+                    if (i != COLLECTION_SIZE - 1)
+                        Monitor.Wait(LockObject);
                 }
             }
         }
