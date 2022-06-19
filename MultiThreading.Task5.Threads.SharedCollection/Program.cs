@@ -37,9 +37,7 @@ namespace MultiThreading.Task5.Threads.SharedCollection
                 lock (LockObject)
                 {
                     Collection.Add(i + 1);
-                    Monitor.Pulse(LockObject);
-                    if (i != COLLECTION_SIZE - 1)
-                        Monitor.Wait(LockObject);
+                    PulseAndWait(i, COLLECTION_SIZE - 1);
                 }
             }
         }
@@ -53,11 +51,16 @@ namespace MultiThreading.Task5.Threads.SharedCollection
                     foreach (var number in collection)
                         Console.Write($"{number} ");
                     Console.WriteLine();
-                    Monitor.Pulse(LockObject);
-                    if (i != COLLECTION_SIZE - 1)
-                        Monitor.Wait(LockObject);
+                    PulseAndWait(i, COLLECTION_SIZE - 1);
                 }
             }
+        }
+
+        private static void PulseAndWait(int loopIndex, int upperLoopBound)
+        {
+            Monitor.Pulse(LockObject);
+            if (loopIndex != upperLoopBound)
+                Monitor.Wait(LockObject);
         }
     }
 }
